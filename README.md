@@ -1,2 +1,0 @@
-# Kang-Mas
-Kang-Mas
