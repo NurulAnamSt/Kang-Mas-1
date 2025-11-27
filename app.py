@@ -1,8 +1,9 @@
 import os
+import logging
 from pathlib import Path
 from flask import Flask, jsonify, request, redirect, url_for, session, flash, get_flashed_messages # pyright: ignore[reportMissingImports]
-from flask_sqlalchemy import SQLAlchemy # pyright: ignore[reportMissingImports] # pyright: ignore[reportMissingImports]
-from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user # pyright: ignore[reportMissingImports] # pyright: ignore[reportMissingImports]
+from flask_sqlalchemy import SQLAlchemy # pyright: ignore[reportMissingImports]
+from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user # pyright: ignore[reportMissingImports]
 from werkzeug.security import generate_password_hash, check_password_hash # pyright: ignore[reportMissingImports]
 from datetime import datetime, timedelta
 import json
@@ -16,9 +17,7 @@ from email.mime.text import MIMEText
 from dotenv import load_dotenv # pyright: ignore[reportMissingImports]
 from werkzeug.utils import secure_filename # pyright: ignore[reportMissingImports]
 import time
-from supabase import create_client, Client # pyright: ignore[reportMissingImports]
-from flask import Flask, render_template
-app = Flask(__name__)
+
 
 # Load environment variables
 load_dotenv()
@@ -9078,3 +9077,4 @@ if __name__ == '__main__':
         print("🚀 Server running on http://localhost:5000")
     
     app.run(debug=True, port=5000)
+
