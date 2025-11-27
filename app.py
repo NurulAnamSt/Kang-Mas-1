@@ -5720,9 +5720,6 @@ def get_chart_of_accounts_content():
         return '<div class="card"><p>Error loading Chart of Accounts</p></div>'
 
 # ===== ROUTES UTAMA =====
-@app.route("/")
-def home():
-    return "Hello from Flask!"
 
 @app.route('/')
 def index():
@@ -9142,3 +9139,4 @@ if __name__ == '__main__':
         print("🏥 Health check: http://localhost:5000/health")  # Tambahkan ini juga
     
     app.run(debug=True, port=5000)
+
